@@ -1,0 +1,19 @@
+name: Loti
+description: 'Base Drupal8 theme based on Orange Boosted'
+core: 8.x
+type: theme
+base theme: false
+
+
+regions:
+  content: 'Content'
+  header: 'Header'
+  footer: 'Footer'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+
+libraries:
+  - loti/global-styling
+
+libraries-override:
+  system/base: false
