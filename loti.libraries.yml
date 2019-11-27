@@ -22,3 +22,12 @@ global:
       css/layouts/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+
+slideshow:
+  js:
+    js/slideshow.js: {}
+  css:
+    css/components/slideshow.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
