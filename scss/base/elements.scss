@@ -2,3 +2,7 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+.visually-hidden {
+    @include sr-only-focusable();
+}
