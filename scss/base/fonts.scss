@@ -8,23 +8,23 @@ $headings-font-family: 'merriweatherbold';
 
 @import "../bootstrap/type";
 
-@font-face {
-    font-family: 'opensans';
-    src: url('#{$font-path}/Open_Sans/OpenSans-Light.woff2') format('woff2'),
-         url('#{$font-path}/Open_Sans/OpenSans-Light.woff') format('woff'),
-         url('#{$font-path}/Open_Sans/OpenSans-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'opensans';
+//     src: url('#{$font-path}/openSans-light.woff2') format('woff2'),
+//          url('#{$font-path}/openSans-light.woff') format('woff'),
+//          url('#{$font-path}/openSans-light.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'merriweatherbold';
-    src: url('#{$font-path}/merriweather-bold.woff2') format('woff2'),
-         url('#{$font-path}/merriweather-bold.woff') format('woff'),
-         url('#{$font-path}/merriweather-bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: bold;
-}
+// @font-face {
+//     font-family: 'merriweatherbold';
+//     src: url('#{$font-path}/merriweather-bold.woff2') format('woff2'),
+//          url('#{$font-path}/merriweather-bold.woff') format('woff'),
+//          url('#{$font-path}/merriweather-bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: bold;
+// }
 
 @font-face {
     font-family: 'icomoon';
@@ -64,12 +64,14 @@ $headings-font-family: 'merriweatherbold';
     content: "\f1ab";
 }
 
-body {
-    font-family: 'opensans', sans-serif;
+article {
+    font-family: 'Open Sans', sans-serif;
     font-size: calc(45.5% + 4 * (100vw - 600px) / 400);
 }
+
+h1,
 .h1,
-#block-loti-branding{
-    font-family: 'merriweatherbold', serif;
+a[rel="home"]{
+    font-family: 'Merriweather', serif;
     font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
 }
