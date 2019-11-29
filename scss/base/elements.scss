@@ -8,5 +8,6 @@
 @import "../bootstrap/reboot";
 
 .visually-hidden {
+    @include sr-only();
     @include sr-only-focusable();
 }
