@@ -16,12 +16,12 @@ html {
     box-sizing: inherit;
 }
   
-@import "functions";
-@import "variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
   
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+@import "../bootstrap/mixins/breakpoints";
+@import "../bootstrap/mixins/grid-framework";
+@import "../bootstrap/mixins/grid";
 
 .layout-container {
     width: 800px;

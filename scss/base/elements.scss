@@ -1,7 +1,11 @@
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "reboot";
+// Required
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+// Optional
+@import "../bootstrap/root";
+@import "../bootstrap/reboot";
 
 .visually-hidden {
     @include sr-only-focusable();
