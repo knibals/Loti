@@ -45,48 +45,43 @@
  * @ingroup themeable
  */
 #}
-<div class="layout-container">
-
-  <header role="banner">
+<header role="navigation">
     {{ page.header }}
-  </header>
+</header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+{{ page.primary_menu }}
+{{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
+{{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+{{ page.highlighted }}
 
-  {{ page.help }}
+{{ page.help }}
 
-  <main role="main">
+<main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      {{ page.content }}
+        {{ page.content }}
     </div>{# /.layout-content #}
 
     {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
+    <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar_first }}
-      </aside>
+    </aside>
     {% endif %}
 
     {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
+    <aside class="layout-sidebar-second" role="complementary">
         {{ page.sidebar_second }}
-      </aside>
+    </aside>
     {% endif %}
+</main>
 
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
+{% if page.footer %}
+<footer role="contentinfo">
+    {{ page.footer }}
+</footer>
+{% endif %}
 
 {{ attach_library('loti/slideshow') }}
