@@ -3,6 +3,7 @@ global:
   css:
     base:
       css/base/elements.css: {}
+      css/base/fonts.css: {}
     component:
       css/components/form.css: {}
       css/components/header.css: {}

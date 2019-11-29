@@ -1,0 +1,75 @@
+$font-path: "../../fonts";
+$headings-font-family: 'merriweatherbold';
+
+// Required
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+@import "../bootstrap/type";
+
+@font-face {
+    font-family: 'opensans';
+    src: url('#{$font-path}/Open_Sans/OpenSans-Light.woff2') format('woff2'),
+         url('#{$font-path}/Open_Sans/OpenSans-Light.woff') format('woff'),
+         url('#{$font-path}/Open_Sans/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweatherbold';
+    src: url('#{$font-path}/merriweather-bold.woff2') format('woff2'),
+         url('#{$font-path}/merriweather-bold.woff') format('woff'),
+         url('#{$font-path}/merriweather-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('#{$font-path}/icomoon.ttf?rpi581') format('truetype'),
+         url('#{$font-path}/icomoon.woff?rpi581') format('woff'),
+         url('#{$font-path}/icomoon.svg?rpi581#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+    content: "\f08c";
+}
+.icon-globe:before {
+    content: "\f0ac";
+}
+.icon-envelope:before {
+    content: "\f0e0";
+}
+.icon-language:before {
+    content: "\f1ab";
+}
+
+body {
+    font-family: 'opensans', sans-serif;
+    font-size: calc(45.5% + 4 * (100vw - 600px) / 400);
+}
+.h1,
+#block-loti-branding{
+    font-family: 'merriweatherbold', serif;
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+}
