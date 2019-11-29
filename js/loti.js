@@ -10,11 +10,14 @@
   /**
    * Behavior description.
    */
-  Drupal.behaviors.loti = {
+  Drupal.behaviors.fontload = {
     attach: function (context, settings) {
-
-      console.log('It works!');
-
+      WebFont.load({
+        google: {
+          families: ['Open Sans', 'Merriweather:700'],
+          text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!'
+        }
+      });
     }
   };
 
