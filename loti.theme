@@ -66,7 +66,7 @@ function loti_preprocess_links__language_block(&$variables) {
         $availableLangName = strtolower(\Drupal::languageManager()->getLanguage($availableLangCode)->getName());
       
         $arr_classes = &$variables['links'][$availableLangCode]['link']['#options']['attributes']['class'];
-        array_push($arr_classes, 'btn', "lang-is-$availableLangName");
+        array_push($arr_classes, 'btn', "lang-is-$availableLangName", 'icon-globe');
         
         $variables['links'][$availableLangCode]['link']['#title'] = \t("Voir ce site en @lang", ['@lang' => $availableLangName]);
     }
