@@ -46,7 +46,30 @@ function loti_page_attachments_alter(&$page) {
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function loti_preprocess_node(&$variables) {
+
+
+/**
+ * Implements hook_preprocess_links__language_block().
+ */
+function loti_preprocess_links__language_block(&$variables) {
+    $current_language = \Drupal::languageManager()->getCurrentLanguage();
+    $clId = $current_language->getId(); // current lauguage ID
+    unset($variables['links'][$clId]); // remove the active language from the menu
+  
+    
+    // if there is only one language left (it is billingual site then),
+    // we display only one link
+    if (count(array_keys($variables['links'])) == 1) {
+        // $variables['theme_hook_original'] = 'simple__language__block';
+
+        $availableLangCode = array_keys($variables['links'])[0]; // available language (e.g. "fr")
+        $availableLangName = strtolower(\Drupal::languageManager()->getLanguage($availableLangCode)->getName());
+      
+        $arr_classes = &$variables['links'][$availableLangCode]['link']['#options']['attributes']['class'];
+        array_push($arr_classes, 'btn', "lang-is-$availableLangName");
+        
+        $variables['links'][$availableLangCode]['link']['#title'] = \t("Voir ce site en @lang", ['@lang' => $availableLangName]);
+    }
 
 }
 
