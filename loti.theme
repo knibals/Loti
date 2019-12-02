@@ -20,6 +20,9 @@ function loti_preprocess_html(&$variables) {
         ],
     ];
     $variables['page']['#attached']['html_head'][] = [$http_equiv, 'http-equiv'];
+
+    $variables['attributes']['data-target'] = 'scroll_spy';
+    $variables['attributes']['data-spy'] = "scroll";
 }
 
 /**
