@@ -19,6 +19,7 @@ global:
   dependencies:
     - core/drupal
     - core/jquery
+    - loti/dropdown
 
 slideshow:
   js:
@@ -28,3 +29,8 @@ slideshow:
   dependencies:
     - core/drupal
     - core/jquery
+
+dropdown:
+  js:
+    js/util.js: {}
+    js/dropdown.js: {}
