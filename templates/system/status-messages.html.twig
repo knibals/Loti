@@ -1,0 +1,41 @@
+<div class="alert-wrapper">
+{% for type, messages in message_list %}
+  {%
+    set classes = [
+      'alert',
+      'alert-dismissible',
+      'fade',
+      'show',
+      type == 'status' ? 'alert-success',
+      type == 'warning' ? 'alert-warning',
+      type == 'error' ? 'alert-danger',
+      type == 'info' ? 'alert-info',
+    ]
+  %}
+  {%
+  set role = {
+    'status': 'status',
+    'error': 'alert',
+    'warning': 'alert',
+    'info': 'status',
+  }
+%}
+
+  <div aria-label="{{ status_headings[type] }}" {{ attributes|without('role', 'aria-label').addClass(classes).setAttribute('role', role[type]) }}>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {% if status_headings[type] %}
+      <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+    {% endif %}
+    {% for message in messages %}
+      {% if loop.last %}
+        {{ message }}
+      {% else %}
+        {{ message }}
+        <hr>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>

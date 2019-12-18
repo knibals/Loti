@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'navbar',
+    'fixed-top',
+  ]
+%}
+    {# sticky-top #}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation" {{ attributes.addClass(classes) }}>
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#block-loti-main-menu" aria-controls="block-loti-main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {{ content }}
+    </div>
+</nav>
