@@ -66,12 +66,16 @@ $headings-font-family: 'merriweatherbold';
 
 article {
     font-family: 'Open Sans', sans-serif;
-    font-size: calc(45.5% + 4 * (100vw - 600px) / 400);
+    @include font-size(1.2rem);
 }
 
 h1,
 .h1,
 a[rel="home"]{
     font-family: 'Merriweather', serif;
-    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+}
+
+h1,
+.h1 {
+    @include font-size(3rem);
 }
