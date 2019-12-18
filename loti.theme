@@ -1,15 +1,8 @@
 <?php
-
-/**
- * @file
- * Functions to support theming in the Loti theme.
- */
-
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
 function loti_preprocess_html(&$variables) {
-
     // SEO Information
     $http_equiv = [
         '#type' => 'html_tag',
@@ -25,14 +18,6 @@ function loti_preprocess_html(&$variables) {
     $variables['attributes']['data-spy'] = "scroll";
 }
 
-/**
- * Implements hook_preprocess_HOOK() for page.html.twig.
- */
-function loti_preprocess_page(&$variables) {
-
-}
-
-
 function loti_page_attachments_alter(&$page) {
     $viewport = [
       '#type' => 'html_tag',
@@ -44,12 +29,6 @@ function loti_page_attachments_alter(&$page) {
     ];
     $page['#attached']['html_head'][] = [$viewport, 'viewport'];
 }
-
-
-/**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-
 
 /**
  * Implements hook_preprocess_links__language_block().
@@ -63,8 +42,6 @@ function loti_preprocess_links__language_block(&$variables) {
     // if there is only one language left (it is billingual site then),
     // we display only one link
     if (count(array_keys($variables['links'])) == 1) {
-        // $variables['theme_hook_original'] = 'simple__language__block';
-
         $availableLangCode = array_keys($variables['links'])[0]; // available language (e.g. "fr")
         $availableLangName = strtolower(\Drupal::languageManager()->getLanguage($availableLangCode)->getName());
       
@@ -73,7 +50,7 @@ function loti_preprocess_links__language_block(&$variables) {
         
         $variables['links'][$availableLangCode]['link']['#title'] = \t("Voir ce site en @lang", ['@lang' => $availableLangName]);
     }
-
+    
 }
 
 /**
@@ -99,4 +76,3 @@ function loti_theme_suggestions_views_view_unformatted_alter(array &$suggestions
     $display = $view->current_display;
     $suggestions[] = 'views_view_unformatted__' . $name . '__' . $display;
 }
-  
