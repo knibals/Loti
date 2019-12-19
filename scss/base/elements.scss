@@ -11,8 +11,3 @@
     @include sr-only();
     @include sr-only-focusable();
 }
-
-.mark, mark {
-    padding: .2em;
-    background-color: #fcf8e3;
-}
