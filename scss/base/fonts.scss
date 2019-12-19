@@ -69,8 +69,8 @@ article {
     @include font-size(1.2rem);
 }
 
-h1,
-.h1,
+h1, .h1,
+h2, .h2,
 a[rel="home"]{
     font-family: 'merriweatherbold', serif;
 }
