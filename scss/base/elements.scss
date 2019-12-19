@@ -11,3 +11,7 @@
     @include sr-only();
     @include sr-only-focusable();
 }
+
+img{
+    @include img-fluid();
+}
