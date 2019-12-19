@@ -8,23 +8,23 @@ $headings-font-family: 'merriweatherbold';
 
 @import "../bootstrap/type";
 
-// @font-face {
-//     font-family: 'opensans';
-//     src: url('#{$font-path}/openSans-light.woff2') format('woff2'),
-//          url('#{$font-path}/openSans-light.woff') format('woff'),
-//          url('#{$font-path}/openSans-light.ttf') format('truetype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'opensans';
+    src: url('#{$font-path}/openSans-light.woff2') format('woff2'),
+         url('#{$font-path}/openSans-light.woff') format('woff'),
+         url('#{$font-path}/openSans-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-// @font-face {
-//     font-family: 'merriweatherbold';
-//     src: url('#{$font-path}/merriweather-bold.woff2') format('woff2'),
-//          url('#{$font-path}/merriweather-bold.woff') format('woff'),
-//          url('#{$font-path}/merriweather-bold.ttf') format('truetype');
-//     font-weight: bold;
-//     font-style: bold;
-// }
+@font-face {
+    font-family: 'merriweatherbold';
+    src: url('#{$font-path}/merriweather-bold.woff2') format('woff2'),
+         url('#{$font-path}/merriweather-bold.woff') format('woff'),
+         url('#{$font-path}/merriweather-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
 
 @font-face {
     font-family: 'icomoon';
@@ -65,14 +65,14 @@ $headings-font-family: 'merriweatherbold';
 }
 
 article {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'opensans', sans-serif;
     @include font-size(1.2rem);
 }
 
 h1,
 .h1,
 a[rel="home"]{
-    font-family: 'Merriweather', serif;
+    font-family: 'merriweatherbold', serif;
 }
 
 h1,

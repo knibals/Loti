@@ -1,15 +1,7 @@
-/**
- * @file
- * Loti behaviors.
- */
-
 (function ($, Drupal) {
 
   'use strict';
-
-  /**
-   * Behavior description.
-   */
+/*
   Drupal.behaviors.fontload = {
     attach: function (context, settings) {
       WebFont.load({
@@ -20,5 +12,5 @@
       });
     }
   };
-
+*/
 } (jQuery, Drupal));
