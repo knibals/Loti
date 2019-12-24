@@ -18,6 +18,12 @@ function loti_preprocess_html(&$variables) {
     $variables['attributes']['data-spy'] = "scroll";
 }
 
+function loti_preprocess_page(&$variables) {
+    if ('is_front' == $variables['is_front']) {
+        $variables['#attached']['library'][] = 'loti/slideshow';
+    }
+}
+
 function loti_page_attachments_alter(&$page) {
     $viewport = [
       '#type' => 'html_tag',

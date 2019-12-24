@@ -23,9 +23,12 @@ global:
 
 slideshow:
   js:
+    js/slick.min.js: {}
     js/slideshow.js: {}
   css:
-    css/components/slideshow.css: {}
+    component:
+      css/components/slick.css: {}
+      css/components/slick-theme.css: {}
   dependencies:
     - core/drupal
     - core/jquery

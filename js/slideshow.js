@@ -4,9 +4,11 @@
   
     Drupal.behaviors.slideshow = {
       attach: function (context, settings) {
-        console.log('slideshow script loaded!');
+        $('.expertises').slick({
+          dots: true,
+          autoplay: true,
+        });
       }
     };
   
   } (jQuery, Drupal));
-  

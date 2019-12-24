@@ -36,6 +36,17 @@ $headings-font-family: 'merriweatherbold';
     font-display: block;
 }
 
+@font-face {
+    font-family: "slick";
+    src: url("#{$font-path}/slick.eot");
+    src: url("#{$font-path}/slick.eot?#iefix") format("embedded-opentype"), 
+         url("#{$font-path}/slick.woff") format("woff"), 
+         url("#{$font-path}/slick.ttf") format("truetype"), 
+         url("#{$font-path}/slick.svg#slick") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;

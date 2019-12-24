@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'hero',
+    'slide',
+    'expertises',
+  ]
+%}
+
+{% if rows -%}
+<section{{ attributes.addClass(classes).setAttribute('id', 'slideExpertises') }}>
+{{ rows }}
+</section>
+{% elseif empty -%}
+{{ empty }}
+{% endif %}
