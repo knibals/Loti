@@ -1,34 +1,41 @@
+{{ page.topbar }}
+<hr />
 {% if page.header %}
-<header role="navigation">
+<header class="site-header" role="navigation">
 {{ page.header }}
 </header>
 {% endif %}
 
+{% if page.primary_menu %}
 {{ page.primary_menu }}
+{% endif %}
 
-{{ page.highlighted }}
+{% if page.featured %}
+{{ page.featured }}
+{% endif %}
+
 {{ page.secondary_menu }}
 
+{% if page.breadcrumb %}
 {{ page.breadcrumb }}
+{% endif %}
 
+{% if page.help %}
 {{ page.help }}
+{% endif %}
 
 <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
+    {% if page.content %}
     <div class="content">
     {{ page.content }}
     </div>{# /.layout-content #}
+    {% endif %}
 
     {% if page.sidebar_first %}
     <aside class="sidebar-first" role="complementary">
     {{ page.sidebar_first }}
-    </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-    <aside class="sidebar-second" role="complementary">
-    {{ page.sidebar_second }}
     </aside>
     {% endif %}
 </main>

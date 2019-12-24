@@ -10,14 +10,14 @@ libraries:
 libraries-override:
   system/base: false
 regions:
+  help: 'Help'
   header: 'Header'
   primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
+  topbar: 'Top bar'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   featured: 'Featured'
   breadcrumb: 'Breadcrumb'
   content: 'Content'
   sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
   footer: 'Footer'
