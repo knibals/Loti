@@ -15,6 +15,7 @@ global:
       css/theme/print.css: { media: print }
   js:
     # https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js: { type: external, weight: -891 }
+    js/util.js: {}
     js/loti.js: {}
   dependencies:
     - core/drupal
@@ -35,5 +36,4 @@ slideshow:
 
 dropdown:
   js:
-    js/util.js: {}
     js/dropdown.js: {}
