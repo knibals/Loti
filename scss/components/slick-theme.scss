@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
 
 // Default Variables
 
@@ -7,43 +9,20 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-loader-path: "./" !default;
-$slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\2190" !default;
-$slick-next-character: "\2192" !default;
-$slick-dot-character: "\2022" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
-
-@function slick-image-url($url) {
-    @if function-exists(image-url) {
-        @return image-url($url);
-    }
-    @else {
-        @return url($slick-loader-path + $url);
-    }
-}
-
-/* Slider */
-
 .slick-list {
     .slick-loading & {
-        background: #fff url("../../images/ajax-loader.gif") center center no-repeat;
+        background: $white url("../../images/ajax-loader.gif") center center no-repeat;
     }
 }
 
-/* Arrows */
 
 .slick-prev,
 .slick-next {
+    z-index: 999 !important;
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -69,7 +48,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: 'slick';
-        font-size: 20px;
+        font-size: 2rem;
         line-height: 1;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
@@ -79,10 +58,10 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: -25px;
+    left: 2rem;
     [dir="rtl"] & {
         left: auto;
-        right: -25px;
+        right: 2rem;
     }
     &:before {
         content: $slick-prev-character;
@@ -93,9 +72,9 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 2rem;
     [dir="rtl"] & {
-        left: -25px;
+        left: 2rem;
         right: auto;
     }
     &:before {
@@ -114,7 +93,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: $slick-dot-bottom-pos;
     list-style: none;
     display: block;
     text-align: center;
@@ -131,7 +110,7 @@ $slick-opacity-not-active: 0.25 !default;
         cursor: pointer;
         button {
             border: 0;
-            background: transparent;
+            background-color: transparent;
             display: block;
             height: 20px;
             width: 20px;
@@ -169,4 +148,38 @@ $slick-opacity-not-active: 0.25 !default;
             opacity: $slick-opacity-default;
         }
     }
+}
+
+.carousel-caption{
+
+    position: absolute;
+    right: (100% - $carousel-caption-width) / 2;
+    bottom: 6rem;
+    left: (100% - $carousel-caption-width) / 2;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $carousel-caption-color;
+    text-align: center;
+
+    background-color: $teal;
+    
+    h2 {
+        padding: 3rem;
+        width: 30rem;
+    /*
+        background: -moz-linear-gradient(70deg, $indigo 0%, $indigo 90%, $blue 90%, $blue 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, $indigo), color-stop(90%, $indigo), color-stop(90%, $blue), color-stop(100%, $blue));
+        background: -webkit-linear-gradient(70deg, $indigo 0%, $indigo 90%, $blue 90%, $blue 100%);
+        background: -o-linear-gradient(70deg, $indigo 0%, $indigo 90%, $blue 90%, $blue 100%);
+        background: -ms-linear-gradient(70deg, $indigo 0%, $indigo 90%, $blue 90%, $blue 100%);
+        background: linear-gradient(70deg, $indigo 0%, $indigo 90%, $blue 90%, $blue 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9900', endColorstr='#ffea00', GradientType=1 );
+    */
+    }
+
+    a {
+        color: $white;
+    }
+
 }

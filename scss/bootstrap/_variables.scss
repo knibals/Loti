@@ -1084,7 +1084,7 @@ $carousel-indicator-spacer:          3px !default;
 $carousel-indicator-active-bg:       $white !default;
 $carousel-indicator-transition:      opacity .6s ease !default;
 
-$carousel-caption-width:             70% !default;
+$carousel-caption-width:             60% !default;
 $carousel-caption-color:             $white !default;
 
 $carousel-control-icon-width:        20px !default;
@@ -1141,3 +1141,19 @@ $positions: static, relative, absolute, fixed, sticky !default;
 
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+
+// Slick carousel
+
+$slick-loader-path: "./" !default;
+$slick-arrow-color: $white !default;
+$slick-dot-color: $black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: .75rem !default;
+$slick-dot-bottom-pos: 1rem !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
